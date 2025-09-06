@@ -137,7 +137,7 @@ public class Wordler {
                     || (lastResult.charAt(i)=='g' && lastGuess.charAt(i)!=possibleword.charAt(i)) 
                     || (lastResult.charAt(i)!='g' && lastGuess.charAt(i)==possibleword.charAt(i)) 
                     || ((lastResult.charAt(i))=='y' && !possibleword.contains(lastGuess.substring(i, i+1)))
-                    || ((lastResult.charAt(i))=='r' && possibleword.contains(lastGuess.substring(i, i+1)));
+                    || ((lastResult.charAt(i))=='r' && possibleword.contains(lastGuess.substring(i, i+1)) && !bestResult.contains(lastGuess.substring(i, i+1)));
             }
             if (remove)
                 removalList.add(possibleword);
